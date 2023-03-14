@@ -5,8 +5,7 @@
 2. Open the terminal
 
 3. Clone the project by running the following command on the terminal(ensure you are connected to the internet)
-
-https://github.com/frauddetectionsystem/ecommerce.git
+. git clone https://github.com/frauddetectionsystem/ecommerce.git
 
 4. Change directory to the project by running the following command on the terminal
 
