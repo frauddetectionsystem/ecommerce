@@ -1,0 +1,51 @@
+{% extends 'appli/base.html' %}
+{% load static %}
+{% block title %}About{% endblock title %}
+
+{% block banner_slider %}
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'appli/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'appli/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'appli/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'appli/images/banner/b4.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+    </div>
+  </div>
+{% endblock banner_slider %}
+
+{% block main-content %}
+<div class="container mt-3">
+    <br>
+    <h2 class="text-center">About us</h2>
+    <br>
+    <div class="row container">
+        <p class="fs-4 text-center">This is a project done by a final year student
+        covenant university 400 level
+        Abuja State in Nigeria. I want to use this as the base start for my programming jounery
+        2023 and the project started a few month ago.
+        This is one of the fastest growing listed Companies in Nigeria</p>
+    </div>
+    <br><br>
+    <h2 class="text-center">Mission</h2>
+    <br>
+    <div class="row container">
+
+        <p class="fs-4 text-center">To embrace the right technology  to delight
+            our Customer
+            Empowering the farmer community through unique ""Relationship Farming"
+            Model
+            To anticipate, understand and respond to our Customers' needs by cresting
+            high-quality products and making the available through innovative and convenient channels
+        </p>
+    </div>
+</div>
+<br><br>
+{% endblock main-content %}
