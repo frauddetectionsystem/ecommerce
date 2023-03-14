@@ -10,6 +10,8 @@
 
 4. Change directory to the project by running the following command on the terminal
 
+**cd ecommerce**
+
 **cd ecn**
 
 5. Create a virtual environment by running the following command:
