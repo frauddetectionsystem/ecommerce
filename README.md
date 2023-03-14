@@ -12,8 +12,6 @@
 
 **cd ecommerce**
 
-**cd ecn**
-
 5. Create a virtual environment by running the following command:
 
 **python –m venv .myvenv**
