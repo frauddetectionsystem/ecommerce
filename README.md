@@ -25,18 +25,18 @@
 **pip install –r requirements.txt**
 
 
-8. Create a superuser account by running the following command:
+8. Run the following command to makemigrations and migrate
+
+**python manage.py makemigrations**
+
+**python manage.py migrate**
+
+9. Create a superuser account by running the following command:
 
 **python manage.py createsuperuser**
 
 It will ask you for a username, email, and password. Please enter the details and remember to
 Save them somewhere.
-
-9. Run the following command to makemigrations and migrate
-
-**python manage.py makemigrations**
-
-**python manage.py migrate**
 
 
 9. Start the development server
