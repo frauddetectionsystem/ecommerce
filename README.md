@@ -1,5 +1,8 @@
 # How to set up the project locally on your system
 
+0. Fork the repo to your GitHub account
+![image](https://user-images.githubusercontent.com/122211702/225223055-92e2b168-6302-4c7e-92d3-b52ab58794f9.png)
+
 1. Open your code editor(either visual studio code or pycharm)
 
 2. Open the terminal
@@ -7,6 +10,8 @@
 3. Clone the project by running the following command on the terminal(ensure you are connected to the internet)
 
 . git clone https://github.com/frauddetectionsystem/ecommerce.git
+
+Instead of https://github.com/frauddetectionsystem/ecommerce.git you copy this ![image](https://user-images.githubusercontent.com/122211702/225223448-dab70fd5-c56e-4547-81f3-4c1d39f92cf3.png) from your GitHub account and use it 
 
 4. Change directory to the project by running the following command on the terminal
 
