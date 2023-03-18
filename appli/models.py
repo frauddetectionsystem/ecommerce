@@ -44,14 +44,12 @@ STATE_CHOICE = (
 )
 
 CATEGORY_CHOICES = (
-    ('CR', 'Curd'),
-    ('ML', 'Milk'),
-    ('LS', 'Lassi'),
-    ('MS', 'Milkshake'),
-    ('PN', 'Paneer'),
-    ('GH', 'Ghee'),
-    ('CZ', 'Cheese'),
-    ('IC', 'Ice-Creams'),
+    ('EL', 'Electronics'),
+    ('CL', 'Clothes'),
+    ('FW', 'Footwears'),
+    ('JW', 'Jewelries'),
+    ('BG', 'Bags'),
+    ('PH', 'Phones'),
 
 )
 
