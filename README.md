@@ -25,6 +25,7 @@ Instead of https://github.com/frauddetectionsystem/ecommerce.git you copy the fo
 
 . .myvenv\Scripts\activate
 
+
 7. Run the following command on the terminal to install every package needed
 
 . pip install –r requirements.txt
