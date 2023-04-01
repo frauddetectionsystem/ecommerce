@@ -30,7 +30,6 @@ Instead of https://github.com/frauddetectionsystem/ecommerce.git you copy the fo
 
 . pip install –r requirements.txt
 
-
 8. Run the following command to makemigrations and migrate
 
 . python manage.py makemigrations
