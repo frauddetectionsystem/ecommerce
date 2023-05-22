@@ -1,0 +1,46 @@
+{% extends 'appli/base.html' %}
+{% load static %}
+{% block title %}Payment Info{% endblock title %}
+
+{% block main-content %}
+
+<div class="container my-5">
+    <div class="row">
+        <h3>Welcome <span class="text-capitalize">{{request.user}}</span></h3>
+        <div class="col-sm-2 border-end">
+            <ul class="list-unstyled">
+                <li class="d-grid"><a href="{% url 'appli:profile' %}" class="btn ">Profile</a></li>
+                <li class="d-grid"><a href="{% url 'appli:address' %}" class="btn">Address</a></li>
+                <li class="d-grid"><a href="{% url 'appli:addpaymentinfo' %}" class="btn">Payment</a></li>
+                <li class="d-grid"><a href="{% url 'appli:showpaymentinfo' %}" class="btn btn-primary">Payment Info</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm-8 offset-sm-1">
+            <div class="row">
+                {% for ad in add %}
+                    <div class="col-sm-6">
+                        <div class="card m-2">
+                          <div class="card-body">
+                            <h3>{{request.user.username}} Payment Info</h3>
+                            <P>Account Number: {{ad.acct_number}}</P>
+                            <P>CVV: {{ad.cvv}}</P>
+                            <P>Card Color: {{ad.card_color}}</P>
+                            <P>Card Type: {{ad.card_type}}</P>
+                            <P>Domain: {{ad.domain}}</P>
+                            <P>Average Income Expenditure: {{ad.averageincomeexp}}</P>
+                            <P>Card Expiry Date: {{ad.card_expiry_date}}</P>
+                            <P>Card 16 Digit No: {{ad.card_digit}}</P>
+                            <P>Age: {{ad.age}}</P>
+                            <P>Marital Status: {{ad.marital_status}}</P>
+                            {% comment %} <p class="text-center"><a href="{% url 'appli:updateAddress' pk=ad.id %}" type="button" class="btn btn-success">Update </a></p> {% endcomment %}
+                          </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock main-content %}

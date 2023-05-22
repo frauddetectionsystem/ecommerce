@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, User
     PasswordResetForm, SetPasswordForm
 from django.contrib.auth.models import User
 
-from .models import Customer
+from .models import Customer, UserPaymentInfo
 
 
 class LoginForm(AuthenticationForm):
@@ -50,12 +50,22 @@ class MySetPasswordForm(SetPasswordForm):
 class CustomerProfileForm(forms.ModelForm):
     class Meta:
         model = Customer
-        fields = ['name', 'locality', 'city', 'mobile', 'state', 'zipcode']
-        widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'locally': forms.TextInput(attrs={'class': 'form-control'}),
-            'city': forms.TextInput(attrs={'class': 'form-control'}),
-            'mobile': forms.NumberInput(attrs={'class': 'form-control'}),
-            'state': forms.Select(attrs={'class': 'form-control'}),
-            'zipcode': forms.NumberInput(attrs={'class': 'form-control'}),
-        }
+        fields = ['firstname', 'lastname', 'city', 'mobile', 'state', 'zipcode', 'gender']
+        # widgets = {
+        #     'name': forms.TextInput(attrs={'class': 'form-control'}),
+        #     'locally': forms.TextInput(attrs={'class': 'form-control'}),
+        #     'city': forms.TextInput(attrs={'class': 'form-control'}),
+        #     'mobile': forms.NumberInput(attrs={'class': 'form-control'}),
+        #     'state': forms.Select(attrs={'class': 'form-control'}),
+        #     'zipcode': forms.NumberInput(attrs={'class': 'form-control'}),
+        # }
+
+class UserPaymentInfoForm(forms.ModelForm):
+    class Meta:
+        model = UserPaymentInfo
+        fields = [
+            'acct_number', 'cvv', 'age',
+            'marital_status', 'card_color', 'card_type',
+            'domain', 'averageincomeexp', 'card_expiry_date',
+            'card_digit'
+        ]

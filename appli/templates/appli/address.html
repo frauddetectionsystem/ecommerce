@@ -3,13 +3,16 @@
 {% block title %}Address{% endblock title %}
 
 {% block main-content %}
+
 <div class="container my-5">
     <div class="row">
         <h3>Welcome <span class="text-capitalize">{{request.user}}</span></h3>
         <div class="col-sm-2 border-end">
             <ul class="list-unstyled">
-                <li class="d-grid"><a href="{% url 'profile' %}" class="btn ">Profile</a></li>
-                <li class="d-grid"><a href="{% url 'address' %}" class="btn btn-primary">Address</a></li>
+                <li class="d-grid"><a href="{% url 'appli:profile' %}" class="btn ">Profile</a></li>
+                <li class="d-grid"><a href="{% url 'appli:address' %}" class="btn btn-primary">Address</a></li>
+                <li class="d-grid"><a href="{% url 'appli:addpaymentinfo' %}" class="btn">Payment</a></li>
+                <li class="d-grid"><a href="{% url 'appli:showpaymentinfo' %}" class="btn">Payment Info</a></li>
             </ul>
         </div>
 
@@ -20,13 +23,14 @@
                         <div class="card m-2">
                           <div class="card-body">
                             <h3>Address {{forloop.counter}}</h3>
-                            <P>Name: {{ad.name}}</P>
-                            <P>Locality: {{ad.locality}}</P>
+                            <P>First Name: {{ad.firstname}}</P>
+                            <P>Last Name: {{ad.lastname}}</P>
                             <P>Mobile: {{ad.mobile}}</P>
                             <P>City: {{ad.city}}</P>
                             <P>State: {{ad.state}}</P>
-                            <P>Pincode: {{ad.zipcode}}</P>
-                            <p class="text-center"><a href="{% url 'updateAddress' pk=ad.id %}" type="button" class="btn btn-success">Update </a></p>
+                            <P>zipcode: {{ad.zipcode}}</P>
+                            <P>Gender: {{ad.gender}}</P>
+                            <p class="text-center"><a href="{% url 'appli:updateAddress' pk=ad.id %}" type="button" class="btn btn-success">Update </a></p>
                           </div>
                         </div>
                     </div>

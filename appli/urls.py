@@ -6,8 +6,10 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_view
 from .forms import LoginForm, MyPasswordResetForm, MyPasswordChangeForm, MySetPasswordForm
 
+app_name = 'appli'
+
 urlpatterns = [
-    path("", views.home),
+    path("", views.home, name="home"),
     path("about/", views.about, name="about"),
     path("contact/", views.contact, name="contact"),
     path("category/<slug:val>", views.CategoryView.as_view(), name="category"),
@@ -16,13 +18,20 @@ urlpatterns = [
     path('profile/', views.ProfileView.as_view(), name='profile'),
     path('address/', views.address, name='address'),
     path("updateAddress/<int:pk>", views.updateAddress.as_view(), name="updateAddress"),
-
-    path('add-to-cart/', views.add_to_cart, name='add-to-cart'),
+    path("removeitem/<int:pk>", views.removeitem, name="removeitem"),
+    path('add-to-cart/', views.add_to_cart, name='addtocart'),
     path('cart/', views.show_cart, name='showcart'),
-    path('checkout/', views.show_cart, name='checkout'),
+    path('checkout/', views.checkout, name='checkout'),
+    path('alerts/', views.alerts, name='alerts'),
+    path('savetoorder/', views.savetoorder, name='savetoorder'),
+    path('search/', views.search_product, name='search_product'),
+    path("minusitemquantity/<int:pk>", views.minusitemquantity, name="minusitemquantity"),
+    path("additemquantity/<int:pk>", views.additemquantity, name="additemquantity"),
 
     path('pluscart/', views.plus_cart),
-
+    
+    path('addpaymentinfo/', views.addpaymentinfo, name='addpaymentinfo'),
+    path('showpaymentinfo/', views.showpaymentinfo, name='showpaymentinfo'),
     # login authentication
     path('registration/', views.CustomerRegistrationView.as_view(), name="customerregistration"),
     path('accounts/login/', auth_view.LoginView.as_view(template_name="appli/login.html", authentication_form=LoginForm), name="login"),
